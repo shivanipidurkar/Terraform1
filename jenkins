@@ -1,0 +1,15 @@
+node {
+    
+    stage('git checkout') { // for display purposes
+        git branch: 'main', url: 'https://github.com/shivanipidurkar/Terraform1.git'
+    }
+    stage('init') {
+        dir('day_7_lifecycle'){
+        sh 'terraform init'
+        }
+    }
+    stage('apply') {
+        sh 'terraform destroy -auto-approve'
+    }
+        
+}
