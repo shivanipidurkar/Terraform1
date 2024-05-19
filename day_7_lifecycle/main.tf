@@ -3,7 +3,7 @@ provider "aws" {
 }
 resource "aws_instance" "test" {
     ami                    = "ami-013e83f579886baeb"      #change ami id for different region
-  instance_type          = "t2.micro"
+  instance_type          = "t2.nano"
   key_name               = "keyv"    
     //availability_zone = "ap-south-1b"
     # subnet_id = "subnet-0a509e41d91a981ec"
